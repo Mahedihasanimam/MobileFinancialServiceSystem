@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import bcrypt from "bcryptjs";
 import reglogo from "../assets/MyCashLogo.png";
+import axios from "axios";
 
 const Registration = () => {
   const {
@@ -19,7 +20,8 @@ const Registration = () => {
         status: "pending",
       };
       // Handle form data submission logic here
-      console.log("Form data submitted:", formData);
+     const sumbimtdata=await axios.post('http://localhost:5000/register/user',formData)
+     console.log(sumbimtdata);
     } catch (error) {
       console.error("Error hashing PIN:", error);
     }
