@@ -10,7 +10,7 @@ const Mainlayout = () => {
             {/* top nav  */}
             <TopNab/>
             {/* sidebar  */}
-            <div className="flex gap-6">
+            <div className=" lg:flex ">
             <Sidebar/>
             <Outlet/>
             </div>
